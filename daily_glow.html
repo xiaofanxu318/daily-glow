@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Glow</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #F5F5DC; /* 米色背景 */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      color: #333333;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #555555;
+      margin-bottom: 30px;
+      font-weight: normal;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background-color: #cccccc;
+      color: #333333;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #bbbbbb;
+    }
+    p {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #555555;
+      text-align: center;
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Daily Glow</h1>
+  <h2>Discover a little ritual for tonight</h2>
+  <button onclick="pickActivity()">Unwrap your nightly surprise</button>
+  <p id="activity">Click the button to reveal a cozy winter night activity!</p>
+
+  <script>
+    const activities = [
+      "Drink a warm cup of cocoa by the window",
+      "Read a cozy book under a blanket",
+      "Light scented candles and relax",
+      "Take a slow evening walk in the crisp air",
+      "Watch your favorite movie with hot snacks",
+      "Try a new winter-themed recipe",
+      "Listen to calming music or a podcast",
+      "Do gentle stretching or yoga before bed",
+      "Write in a journal or reflect on the day",
+      "Stargaze from your balcony or backyard"
+    ];
+
+    function pickActivity() {
+      const randomIndex = Math.floor(Math.random() * activities.length);
+      document.getElementById('activity').textContent = activities[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
